@@ -121,7 +121,7 @@
 
 #home .content h1::after{
 	content: "그렇지 못한 배경";
-	animation: textanim 10s linear infinite;
+	animation: textanim 5s linear infinite;
 }
 
 section{
