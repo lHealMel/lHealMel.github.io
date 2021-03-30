@@ -228,23 +228,46 @@ section{
 }
 
 .skill-bar{
-	height: 3px;
-	background-color: #ddd;
-	margin-top: 14px;
+	height: 20px;
+	background-color: #cacaca;
+	border-radius: 8px;
+}
+
+.skill-per{
+	height: 20px;
+	background-color: #0fbcf9;
+	border-radius: 8px;
+	width: 0;
+	transition: 1s linear;
 	position: relative;
 }
 
-.skill-bar::after{
-	content: "";
+.skill-per::before{
+	content: attr(per);
 	position: absolute;
-	height: 6px;
-	background-color: #48dbfb;
-	bottom: 0;
+	padding: 4px 6px;
+	background-color: #000;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 4px;
+	top: -35px;
+	right: 0;
+	transform: translateX(50%);
 }
 
-.c::after{
-	width: 20%;
+.skill-per::after{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	top: -16px;
+	right: 0;
+	transform: translateX(50%) rotate(45deg);
+	border-radius: 2px;
+
 }
+
 
 .python::after{
 	width: 10%;
