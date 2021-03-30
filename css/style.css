@@ -8,6 +8,18 @@
 	box-sizing: border-box;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
+::selection{
+	background-color: #48dbfb60;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #353b48;
+}
+
 .navbar {
 	position: fixed;
 	background-color: transparent;
@@ -121,7 +133,7 @@
 
 #home .content h1::after{
 	content: "그렇지 못한 배경";
-	animation: textanim 5s linear infinite;
+	animation: textanim 10s linear infinite;
 }
 
 section{
