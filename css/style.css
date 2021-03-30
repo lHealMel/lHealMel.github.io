@@ -224,6 +224,10 @@ section{
 
 .skill-info{
 	display: flex;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 35px 0;
+	text-transform: uppercase;
 	justify-content: space-between;
 }
 
@@ -250,7 +254,7 @@ section{
 	color: #fff;
 	font-size: 12px;
 	border-radius: 4px;
-	top: -35px;
+	top: -26px;
 	right: 0;
 	transform: translateX(50%);
 }
@@ -261,24 +265,11 @@ section{
 	width: 10px;
 	height: 10px;
 	background-color: #000;
-	top: -16px;
+	top: -10px;
 	right: 0;
 	transform: translateX(50%) rotate(45deg);
 	border-radius: 2px;
 
-}
-
-
-.python::after{
-	width: 10%;
-}
-
-.java::after{
-	width: 10%;
-}
-
-.html::after{
-	width: 10%;
 }
 
 section.dark{
