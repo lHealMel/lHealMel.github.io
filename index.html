@@ -84,7 +84,8 @@
 						지금은 C언어를 다루고 있어요.
 						<br><br>
 						Java의 경우 jsp로, Python은 tkinter와 crawling을 위해 잠시 써본 정도에요.<br>
-						마찬가지로 HTML과 CSS도 jsp를 쓰면서 조금 배웠고, 이 홈페이지는 복사 붙여넣기 한 것마냥 따라 한 거에요.
+						마찬가지로 HTML과 CSS도 jsp를 쓰면서 조금 배웠고, 이 홈페이지는 복사 붙여넣기 한것마냥 따라한거에요.<br>
+						아마 언젠가는 이 페이지도 jsp로 바뀌지 않을까요?
 						<br>
 						<span style="text-decoration: line-through;">HTML은 프로그래밍 언어가 아닙니다</span>
 					</p>
@@ -98,7 +99,9 @@
 						<span>C</span>
 						<span>20%</span>
 					</div>
-					<div class="skill-bar c"></div>
+					<div class="skill-bar">
+						<div class="skill-per" per="20"></div>
+					</div>
 				</div>
 
 				<div class="skill">
@@ -106,7 +109,9 @@
 						<span>Python</span>
 						<span>10%</span>
 					</div>
-					<div class="skill-bar python"></div>
+					<div class="skill-bar">
+						<div class="skill-per" per="10"></div>
+					</div>
 				</div>
 
 				<div class="skill">
@@ -114,7 +119,9 @@
 						<span>Java</span>
 						<span>10%</span>
 					</div>
-					<div class="skill-bar java"></div>
+					<div class="skill-bar">
+						<div class="skill-per" per="10"></div>
+					</div>
 				</div>
 
 				<div class="skill">
@@ -122,7 +129,9 @@
 						<span>HTML</span>
 						<span>10%</span>
 					</div>
-					<div class="skill-bar html"></div>
+					<div class="skill-bar">
+						<div class="skill-per" per="10"></div>
+					</div>
 				</div>
 
 			</div>
@@ -159,6 +168,23 @@
 			</div>
 		</div>
 	</section>
+
+	<script>
+		$(".skill-per").each(function () {
+			var $this = $(this);
+			var per = $this.attr('per');
+			$this.css("width", per + '%');
+			$({ animatedValue: 0 }).animate({ animatedValue: per }, {
+				duration: 1000,
+				step: function () {
+					$this.attr('per', Math.floor(this.animatedValue) + '%');
+				},
+				complete: function () {
+					$this.attr('per', Math.floor(this.animatedValue) + '%');
+				}
+			});
+		});
+	</script>
 
 
 
