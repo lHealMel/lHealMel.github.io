@@ -168,7 +168,7 @@ html{
 
 #home .content h1::after{
 	content: "그럴싸한 문구";
-	animation: textanim 10s linear infinite;
+	animation: textanim 5s linear infinite;
 }
 
 section{
