@@ -167,7 +167,7 @@ html{
 }
 
 #home .content h1::after{
-	content: "그렇지 못한 배경";
+	content: "그럴싸한 문구";
 	animation: textanim 10s linear infinite;
 }
 
@@ -370,7 +370,7 @@ section.dark .section-title::after{
 
 @keyframes textanim{
 	50%{
-		content: "그럴싸한 문구";
+		content: "그렇지 못한 배경";
 	}
 }
 
