@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebProgramming#5-CSS(2)-update2</title>
+    <style type="text/css">
+        .second {
+            border: 1px solid black;
+        }
+
+        .first {
+            border: 1px dotted red;
+        }
+
+        p#test1 {
+            font: italic 15px arial;
+        }
+
+        p#test2 {
+            height: 100px;
+            width: 50%;
+            background-color: black;
+            color: white;
+        }
+
+        #test3 {
+            background-color: black;
+            color: white;
+            padding: 12px 13px 14px 15px;
+            margin: 12px 13px 14px 15px;
+            border: 2px solid white;
+            display: flex;
+        }
+
+        #test5 {
+            float: right;
+        }
+
+        .test6 h3 {
+            background-color: red;
+        }
+
+        .test6 em {
+            color: red;
+        }
+
+        .test6 h3 em {
+            color: blue;
+        }
+
+        .test7 a:link {
+            color: red;
+        }
+
+        .test7 a:visited {
+            color: green;
+        }
+
+        .test7 a:hover {
+            color: blue;
+        }
+
+        .test8 p:first-child {
+            color: blue;
+        }
+
+        .test8 p i:first-child {
+            color: red;
+        }
+
+        .test8 p>i {
+            color: green;
+        }
+
+        .test8 p:nth-child(2) {
+            color: yellowgreen;
+        }
+
+        .test8 p:nth-child(2) i {
+            color: yellow;
+        }
+
+        .test8 p:nth-child(2) i:nth-child(2) {
+            color: orange;
+        }
+
+        .test9 p:first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+
+        .test9 p:first-letter {
+            color: #800000;
+            font: bold xx-large times;
+        }
+
+
+
+        td,
+        th {
+            border: 1px solid #666666;
+            padding: 5px;
+            text-align: center;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        img.test5 {
+            border: 1px solid black;
+        }
+
+        .display-test p,
+        .display-test span {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>&lt;span&gt; tag</h2>
+    <span>&lt;span&gt; is an in-line</span>
+
+    <hr>
+
+    <h2>&lt;div&gt; tag</h2>
+    <div>
+        <p>A section in &lt;div&gt; tag</p>
+        <p>&lt;div&gt; tag is used to group block-elements</p>
+    </div>
+    <br>
+    <p>Used&lt;div&gt; tag & Internal style</p>
+    <div class="first">
+        <p>Section1</p>
+    </div>
+    <div class="second">
+        <p>Section2</p>
+    </div>
+
+    <hr>
+
+    <h2>Font property</h2>
+    <pre>
+        p{
+            font-style: itlaic;
+            font-size: 15px;
+            font-family: arial;
+        }
+
+        is same for;
+
+        p{
+            font: italic 15px arial;
+        }
+    </pre>
+
+    <span>Order(order is important): </span>
+    <ol>
+        <li>font-style</li>
+        <li>font-variant</li>
+        <li>font-weight</li>
+        <li>font-size</li>
+        <li>font-family</li>
+    </ol>
+    <p id="test1">Used font property (font: italic 15px arial;)</p>
+    <p>In order to use the form of "font:...", font-size & font-family values required </p>
+    <p>Font-size unit:</p>
+    <img src="https://cdn.discordapp.com/attachments/813050853807095849/831903978123296778/unknown.png">
+
+    <hr>
+
+    <h2>Box model</h2>
+    <img width="500px" src="https://cdn.discordapp.com/attachments/793478378094198786/831901916739928104/unknown.png">
+
+    <hr>
+
+    <h2>Width & Height</h2>
+    <pre>
+        #test2 {
+            height: 100px;
+            width: 50%;
+            (background-color: black;)
+            (color: white;)
+        }
+    </pre>
+    <p id="test2">The above code has been applied.</p>
+    <img src="https://cdn.discordapp.com/attachments/813050853807095849/831904233137242112/unknown.png">
+
+    <hr>
+
+    <h2>Padding & Margin</h2>
+    <pre>
+        #test3{
+            padding-top: 12px;
+            padding-right: 13px;
+            padding-bottom: 14px;
+            padding-left: 15px;
+
+            margin-top: 12px;
+            margin-right: 13px;
+            marging-bottom: 14px;
+            margin-left: 15px;
+        }
+
+        is same for;
+
+        #test3{
+            padding: 12px 13px 14px 15px;
+
+            margin: 12px 13px 14px 15px;
+        }
+    </pre>
+    <div style="background-color: red; display: flex; width: 300px; height: 120px;">
+        <div id="test3">
+            <div style="vertical-align: middle; background-color: blue; display: flex; padding: 0 5px;">
+                <span>Black space is padding area.<br> Red space is margin area.</span>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Border</h2>
+    <img src="https://cdn.discordapp.com/attachments/813050853807095849/831909280415481916/unknown.png">
+    <pre>
+        #test4{
+            border-width: 5px;
+            border-style: solid;
+            border-color: red;
+
+            border-top-width: thin;
+            border-right-width: medium;
+            border-bottom-width: thick;
+            border-left-width: 10px;
+
+        }
+
+        is same for;
+
+        #test4{
+            border: 5px solid red;
+
+            border-width: thin medium thick 10px;
+        }
+    </pre>
+    <h4>May set a different value for each border(top, right, bottom, left)</h4>
+
+    <hr>
+
+    <h2>Background</h2>
+    <img src="https://cdn.discordapp.com/attachments/813050853807095849/831910858837196820/unknown.png">
+    <h4 style="text-decoration: underline;">The order is important</h4>
+
+    <hr>
+
+    <h2>Float</h2>
+    <table>
+        <tr>
+            <th>Value</th>
+            <td>none</td>
+            <td>left</td>
+            <td>right</td>
+        </tr>
+    </table>
+    <br>
+    <p>Before use float: right to img</p>
+    <div style="border: 1px solid black;">
+        <img class="test5" width="50px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/220px-CSS3_logo_and_wordmark.svg.png">
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi earum veritatis tenetur provident dolores
+            repudiandae corrupti sit, quia cum fugiat libero quae inventore? Nostrum impedit quo modi recusandae,
+            laudantium
+            ipsum doloribus. Voluptatem, natus, excepturi nulla ratione quia fugiat, neque velit non accusantium enim
+            nostrum quibusdam ab vero atque quidem voluptate?</span>
+    </div>
+
+    <br>
+
+    <p>After use float: rigth to img</p>
+    <div style="border: 1px solid black;">
+        <img class="test5" id="test5" width="50px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/220px-CSS3_logo_and_wordmark.svg.png">
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi earum veritatis tenetur provident dolores
+            repudiandae corrupti sit, quia cum fugiat libero quae inventore? Nostrum impedit quo modi recusandae,
+            laudantium
+            ipsum doloribus. Voluptatem, natus, excepturi nulla ratione quia fugiat, neque velit non accusantium enim
+            nostrum quibusdam ab vero atque quidem voluptate?</span>
+    </div>
+
+    <hr>
+
+    <h2>Display</h2>
+    <ul><b>Block</b>
+        <ul>
+            <li>Full-line</li>
+            <li>Line break is added before/after it</li>
+            <li>Can set the size.</li>
+        </ul>
+        <b>Inline</b>
+        <ul>
+            <li>Take up as much as width as necessary</li>
+            <li>Does not line break</li>
+            <li>Cannot set the size.</li>
+        </ul>
+    </ul>
+
+    <table>
+        <tr>
+            <th>block</th>
+            <td>&lt;h1&gt;, &lt;p&gt;, &lt;tr&gt;, &lt;li&gt;, &lt;div&gt;</td>
+        </tr>
+        <tr>
+            <th>float</th>
+            <td>&lt;b&gt;, &lt;em&gt;, &lt;a&gt;, &lt;span&gt;</td>
+        </tr>
+    </table>
+    <br>
+    <img src="https://cdn.discordapp.com/attachments/813050853807095849/831917721243484160/unknown.png">
+    <div class="display-test">
+        <p>&lt;p&gt; tag is block element but now is:</p>
+        <p style="display: inline;"> inline element now</p>
+        After this &lt;p&gt;tag, there is no break
+
+        <br>(&lt;br&gt;)Hence there is an &lt;br&gt; tag, there is no line break
+
+        <br>(&lt;br&gt;)
+        <br>(&lt;br&gt;)
+        <br>
+
+        <span>&lt;span&gt; tag is inline element but now is:</span>
+        <span style="display: block;"> block element now</span>
+        There is an line break(new-line start)
+        <br>
+
+        <p style="display: inline-block;">&lt;p&gt; tag is block element but now is inline block element</p>
+
+    </div>
+
+    <hr>
+
+    <h2>More selectors</h2>
+    <img src="https://cdn.discordapp.com/attachments/445219330247098378/831924394778558544/unknown.png">
+
+    <hr>
+
+    <pre>
+        h3{
+            background-color:red;
+        }
+        em{
+            color: red;
+        }
+        h3 em{
+            color: blue;
+        }
+    </pre>
+
+    <p>The above code has been applied</p>
+    <div class="test6">
+        <h2>Descendant Selector</h2>
+        <h3>This is level-3 header</h3>
+        <p>This is a normal paragraph with ad <em>&lt;em&gt; (emphasize)</em> tag</p>
+        <h3>This header is <em>very</em> important</h3>
+    </div>
+
+    <hr>
+
+    <h2>Pseudo-classes</h2>
+    <img src="https://cdn.discordapp.com/attachments/445219330247098378/831926269444096051/unknown.png">
+
+    <br>
+
+    <hr>
+
+    <h2>Anchor Pseudo-class</h2>
+    <pre>
+        a:link{
+           color: blue;
+        }
+        a:visited{
+            color: green;
+        }
+        a:hover
+            color: red;
+        }
+    </pre>
+    <div class="test7">
+        <p>The above code has been applied</p>
+        <a href="https://sw.gachon.ac.kr">SWDM Home</a><br>
+        <a href="https://www.google.co.kr">Google</a><br>
+        <a href="https://www.w3schools.com">W3schools</a><br>
+    </div>
+
+    <hr>
+
+    <h2>:first-chlid & :nth-child pseudo-class</h2>
+    <pre>
+        p:first-child{          <b>/*any &lt;p&gt; element that is the first child of any element*/</b>
+            color: blue;
+        }
+        p i:first-child{        <b>/*the first &lt;i&gt; element in all&lt;p&gt; elements*/</b>
+            color: red;
+        }
+        p>i{                    <b>/*any &lt;i&gt; element in all&lt;p&gt; elements*/</b>
+            color: green;
+        }
+        p:nth-child(2){         <b>/*any &lt;p&gt; element that is the 2nd child of any element*/</b>
+            color: yellowgreen;
+        }
+        p:nth-child(2) i{       <b>/*all &lt;i&gt; elements in &lt;p&gt; elements that are the 2nd child of any element*/</b>
+            color: yellow;
+        }
+        p:nth-child(2) i:nth-child(2){       <b>/*any &lt;i&gt; elements that is the 2nd child of &lt;p&gt; elements that are the 2nd child of any element*/</b>
+            color: orange;
+        }
+
+        The above code has been applied to:
+
+            &lt;p&gt;1-1 parahraph&lt;i&gt;1st italic&lt;/i&gt;1-2 paragraph&lt;i&gt;2nd italic&lt;/i&gt;1-3 paragraph&lt;i&gt;3rd italic&lt;/i&gt;&lt;/p&gt;
+            &lt;p&gt;2-1 parahraph&lt;i&gt;1st italic&lt;/i&gt;2-2 paragraph&lt;i&gt;2nd italic&lt;/i&gt;2-3 paragraph&lt;i&gt;3rd italic&lt;/i&gt;&lt;/p&gt;
+            
+            &lt;p&gt;----div----&lt;/p&gt;
+            &lt;div&gt;
+                &lt;p&gt;1-1 parahraph&lt;i&gt;1st italic&lt;/i&gt;1-2 paragraph&lt;i&gt;2nd italic&lt;/i&gt;1-3 paragraph&lt;i&gt;3rd italic&lt;/i&gt;&lt;/p&gt;
+                &lt;p&gt;2-1 parahraph&lt;i&gt;1st italic&lt;/i&gt;2-2 paragraph&lt;i&gt;2nd italic&lt;/i&gt;2-3 paragraph&lt;i&gt;3rd italic&lt;/i&gt;&lt;/p&gt;
+            &lt;/div&gt;
+    </pre>
+
+    <br>
+
+    <p>result is:</p>
+    <div class="test8">
+        <p>1-1 parahraph<i>1st italic</i>1-2 paragraph<i>2nd italic</i>1-3 paragraph<i>3rd italic</i></p>
+        <p>2-1 parahraph<i>1st italic</i>2-2 paragraph<i>2nd italic</i>2-3 paragraph<i>3rd italic</i></p>
+        <p>3-1 parahraph<i>1st italic</i>3-2 paragraph<i>2nd italic</i>3-3 paragraph<i>3rd italic</i></p>
+
+        <p>----div----</p>
+        <div>
+            <p>1-1 parahraph<i>1st italic</i>1-2 paragraph<i>2nd italic</i>1-3 paragraph<i>3rd italic</i></p>
+            <p>2-1 parahraph<i>1st italic</i>2-2 paragraph<i>2nd italic</i>2-3 paragraph<i>3rd italic</i></p>
+            <p>3-1 parahraph<i>1st italic</i>3-2 paragraph<i>2nd italic</i>3-3 paragraph<i>3rd italic</i></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Pseudo-elements</h2>
+    <img src="https://cdn.discordapp.com/attachments/445219330247098378/831940119413260338/unknown.png">
+    <pre>
+        p:first-line{
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+        p:first-letter{
+            color: #ff0000;
+            font: bold xx-large times;
+        }
+    </pre>
+    <p><b>The above code has been applied</b></p>
+    <div class="test9">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptas commodi! Earum iure expedita
+            consectetur! Placeat, consectetur blanditiis modi fuga ad nulla possimus ducimus sapiente. Labore sequi quae
+            iusto deserunt.</p>
+    </div>
+    <br>
+    <img src="https://cdn.discordapp.com/attachments/445219330247098378/831941406117331014/unknown.png">
+
+    <hr>
+
+    <h2>CSS Media</h2>
+    <img src="https://cdn.discordapp.com/attachments/445219330247098378/831941831822540830/unknown.png">
+    <br>
+    <p><b>@media rules</b></p>
+    <pre>
+        @media screen {
+            p{
+                border: 1px solid black;
+            }
+        }
+        @media print {
+            p{  
+                font-size: 20px;
+                border: 1px solid red;
+                color: blue;
+            }
+        }
+    </pre>
+
+    <hr>
+
+    <h1 style="text-decoration-line: underline;">Cascading rule</h1>
+    <ol type="1">
+        <b>
+            <li>Weight</li>
+        </b>
+        <b>
+            <li>Specificity</li>
+        </b>
+        <b>
+            <li>order(later one)</li>
+        </b>
+    </ol>
+
+    <br>
+
+    <img src="https://cdn.discordapp.com/attachments/445219330247098378/831943907209117716/unknown.png">
+    <img src="https://cdn.discordapp.com/attachments/445219330247098378/831944153188401152/unknown.png">
+    <img src="https://cdn.discordapp.com/attachments/445219330247098378/831944352359383100/unknown.png">
+
+    <hr>
+    
+    <p style="font-size: 5px; text-align: right;">2021-04-15<br>02:32, JH</p>
+
+</body>
+
+</html>
