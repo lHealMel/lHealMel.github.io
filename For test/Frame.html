@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="author" content="Chung ji ho">
+    <title>WebProgramming#6-Frame</title>
+    <style type="text/css">
+        td,
+        th {
+            border: 1px solid #666666;
+            padding: 5px;
+            text-align: center;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Frame tag, &lt;frameset&gt; & &lt;frame&gt;</h2>
+    <pre>
+        &lt;frameset cols="20%, 80%"&gt;
+            &lt;frame SRC="ex6-1-2.html" name="first" /&gt;
+            &lt;frame SRC="ex6-1-6.html" name="second" /&gt;
+        &lt;/frameset&gt;
+    </pre>
+    <p>Not supported in HTML5</p>
+    <p>Only use the frame tag in file</p>
+
+    <pre>
+        &lt;a href="test.html" target="first"&gt;Test&lt;/a&gt;
+    </pre>
+    <p>If you click that &lt;a&gt; tag, than the file is open at the &lt;frame&gt; that name is "first"</p>
+
+    <table>
+        <tr>
+            <th>&lt;frameset&gt;</th>
+            <td>cols</td>
+            <td>rows</td>
+            <td>border</td>
+            <td>frameborder</td>
+            <td>framespacing</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>&lt;frame&gt;</th>
+            <td>src</td>
+            <td>name</td>
+            <td>frameborder</td>
+            <td>marginwidth</td>
+            <td>marginheight</td>
+            <td>scrolling</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Inline Frame tag, &lt;iframe&gt;</h2>
+    <pre>
+        &lt;iframe width="100%" height="400px" src="https://lhealmel.github.io"&gt;&lt;/iframe&gt;
+    </pre>
+    <iframe width="100%" height="400px" src="https://lhealmel.github.io"></iframe>
+    
+    <iframe width="100%" height="400px" src="https://lhealmel.github.io"></iframe>
+</body>
+
+</html>
