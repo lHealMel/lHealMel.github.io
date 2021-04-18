@@ -130,6 +130,9 @@
 
     <h2>&lt;span&gt; tag</h2>
     <span>&lt;span&gt; is an in-line</span>
+    <pre>
+        &lt;span>&lt;span&gt; is an in-line&lt;/span>
+    </pre>
 
     <hr>
 
@@ -146,6 +149,23 @@
     <div class="second">
         <p>Section2</p>
     </div>
+
+    <pre>
+        .second {
+            border: 1px solid black;
+        }
+
+        .first {
+            border: 1px dotted red;
+        }
+
+        &lt;div class="first">
+            &lt;p>Section1&lt;/p>
+        &lt;/div>
+        &lt;div class="second">
+            &lt;p>Section2&lt;/p>
+        &lt;/div>
+    </pre>
 
     <hr>
 
@@ -227,6 +247,25 @@
             </div>
         </div>
     </div>
+
+    <pre>
+        #test3 {
+            background-color: black;
+            color: white;
+            padding: 12px 13px 14px 15px;
+            margin: 12px 13px 14px 15px;
+            border: 2px solid white;
+            display: flex;
+        }
+
+        &lt;div style="background-color: red; display: flex; width: 300px; height: 120px;">
+            &lt;div id="test3">
+                &lt;div style="vertical-align: middle; background-color: blue; display: flex; padding: 0 5px;">
+                    &lt;span>Black space is padding area.&lt;br> Red space is margin area.&lt;/span>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    </pre>
 
     <hr>
 
@@ -352,7 +391,7 @@
     <img src="https://cdn.discordapp.com/attachments/445219330247098378/831924394778558544/unknown.png">
 
     <hr>
-
+    <h2>Descendant Selector</h2>
     <pre>
         h3{
             background-color:red;
@@ -363,11 +402,15 @@
         h3 em{
             color: blue;
         }
+        &lt;div>
+            &lt;h3>This is level-3 header&lt;/h3>
+            &lt;p>This is a normal paragraph with ad &lt;em>&lt;em&gt; (emphasize)&lt;/em> tag&lt;/p>
+            &lt;h3>This header is &lt;em>very&lt;/em> important&lt;/h3>
+        &lt;/div>
     </pre>
 
     <p>The above code has been applied</p>
     <div class="test6">
-        <h2>Descendant Selector</h2>
         <h3>This is level-3 header</h3>
         <p>This is a normal paragraph with ad <em>&lt;em&gt; (emphasize)</em> tag</p>
         <h3>This header is <em>very</em> important</h3>
@@ -384,15 +427,24 @@
 
     <h2>Anchor Pseudo-class</h2>
     <pre>
-        a:link{
-           color: blue;
-        }
-        a:visited{
-            color: green;
-        }
-        a:hover
+        a:link {         <b>//기본 색</b>
             color: red;
         }
+
+        a:visited {      <b>//방문한 링크</b>
+            color: green;
+        }
+
+        a:hover {        <b>//커서를 가져다 댈때</b>
+            color: blue;
+        }
+
+        &lt;div>
+            &lt;p>The above code has been applied&lt;/p>
+            &lt;a href="https://sw.gachon.ac.kr">SWDM Home&lt;/a>&lt;br>
+            &lt;a href="https://www.google.co.kr">Google&lt;/a>&lt;br>
+            &lt;a href="https://www.w3schools.com">W3schools&lt;/a>&lt;br>
+        &lt;/div>
     </pre>
     <div class="test7">
         <p>The above code has been applied</p>

@@ -15,6 +15,16 @@
 
     this is &lt;hr&gt; tag
 
+    <pre>
+        &lt;h1&gt;This is &lt;h1&gt; tag&lt;/h1&gt;
+
+        &lt;h3&gt;This is &lt;h3&gt; tag&lt;/h3&gt;
+    
+        &lt;p&gt;This is &lt;p&gt; tag&lt;/p&gt;
+    
+        this is &lt;hr&gt; tag
+    </pre>
+
     <hr>
 
     <ol type=1>
@@ -24,6 +34,16 @@
         <li>Adventure</li>
         <li>Education</li>
     </ol>
+
+    <pre>
+        &lt;ol type=1>
+            &lt;h2>&lt;ol&gt; tag&lt;/h2>
+            &lt;li>Fiction&lt;/li>
+            &lt;li>Non-Fiction&lt;/li>
+            &lt;li>Adventure&lt;/li>
+            &lt;li>Education&lt;/li>
+        &lt;/ol>
+    </pre>
 
     <hr>
 
@@ -35,7 +55,19 @@
         <li>Trailer</li>
     </ul>
 
+    <pre>
+        &lt;ul>
+            &lt;h2>&lt;ul&gt; tag&lt;/h2>
+            &lt;li>Car&lt;/li>
+            &lt;li>Van&lt;/li>
+            &lt;li>Truck&lt;/li>
+            &lt;li>Trailer&lt;/li>
+        &lt;/ul>
+    </pre>
+
     <hr>
+
+    <h2>&lt;dt>, &lt;dl> tag</h2>
 
     <dl>
         <dt>this is &lt;dt&gt; tag in &lt;dl&gt; tag.</dt>
@@ -43,6 +75,14 @@
         <dt>this is &lt;dt&gt; tag in &lt;dl&gt; tag.</dt>
         <dd>this is &lt;dd&gt; tag in &lt;dl&gt; tag.</dd>
     </dl>
+    <pre>
+    &lt;dl>
+        &lt;dt>this is &lt;dt&gt; tag in &lt;dl&gt; tag.&lt;/dt>
+        &lt;dd>this is &lt;dd&gt; tag in &lt;dl&gt; tag.&lt;/dd>
+        &lt;dt>this is &lt;dt&gt; tag in &lt;dl&gt; tag.&lt;/dt>
+        &lt;dd>this is &lt;dd&gt; tag in &lt;dl&gt; tag.&lt;/dd>
+    &lt;/dl>
+    </pre>
 
     <hr>
 
@@ -67,8 +107,32 @@
         </li>
     </ol>
 
-    <hr>
+    <pre>
+        &lt;ol type=1>
+            &lt;h2>Nested list; unordered list in ordered list.&lt;/h2>
+            &lt;li>
+                &lt;ul>
+                    &lt;li>Car&lt;/li>
+                    &lt;li>Van&lt;/li>
+                    &lt;li>Truck&lt;/li>
+                    &lt;li>Trailer&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+            &lt;br>
+            &lt;li>
+                &lt;ul>
+                    &lt;li>Car&lt;/li>
+                    &lt;li>Van&lt;/li>
+                    &lt;li>Truck&lt;/li>
+                    &lt;li>Trailer&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+        &lt;/ol>
+    </pre>
 
+    <hr>   
+
+    <h2>&lt;Table> tag</h2>
     <table border="1">
         <tr>
             <td>row1, colum1</td>
@@ -80,7 +144,20 @@
         </tr>
     </table>
 
-    <hr>
+    <pre>
+        &lt;table border="1">
+            &lt;tr>
+                &lt;td>row1, colum1&lt;/td>
+                &lt;td>row1, colum2&lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;td>row2, colum1&lt;/td>
+                &lt;td>row2, colum2&lt;/td>
+            &lt;/tr>
+        &lt;/table>
+    </pre>
+
+    <br>
 
     <table border="1">
         <caption>This is &lt;caption&gt; tag in &lt;table&gt; tag.</caption>
@@ -95,7 +172,22 @@
         </tr>
     </table>
 
-    <hr>
+    <pre>
+        &lt;table border="1">
+            &lt;caption>This is &lt;caption&gt; tag in &lt;table&gt; tag.&lt;/caption>
+            &lt;tr>
+                &lt;th>this is &lt;th&gt; tag in &lt;tr&gt; tag&lt;/th>
+            &lt;/tr>
+            &lt;tr>
+                &lt;td>this is &lt;td&gt; tag in &lt;tr&gt; tag&lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;td>tr: Table Row, td: Table Data th: Table Header&lt;/td>
+            &lt;/tr>
+        &lt;/table>
+    </pre>
+
+    <br>
 
     <table border="1">
         <tr>
@@ -107,7 +199,19 @@
         </tr>
     </table>
 
-    <hr>
+    <pre>
+        &lt;table border="1">
+            &lt;tr>
+                &lt;td colspan="2">row1, colum1&2, used colspan attr.&lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;td>row2, colum1&lt;/td>
+                &lt;td>row2, colum2&lt;/td>
+            &lt;/tr>
+        &lt;/table>
+    </pre>
+
+    <br>
 
     <table border="1">
         <tr>
@@ -119,20 +223,45 @@
         </tr>
     </table>
 
+    <pre>
+        &lt;table border="1">
+            &lt;tr>
+                &lt;td rowspan="2">row1&2, colum1, used rowspan attr.&lt;/td>
+                &lt;td>row1, colum2&lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;td>row2, colum2&lt;/td>
+            &lt;/tr>
+        &lt;/table>
+    </pre>
+
     <hr>
 
+    <h2>&lt;blockquote> tag</h2>
     <blockquote>This is &lt;blockquote&gt; tag</blockquote>
+    <pre>
+        &lt;blockquote>This is &lt;blockquote&gt; tag&lt;/blockquote>
+    </pre>
 
     <hr>
 
+    <h2>&lt;address> tag</h2>
     <address>This is &lt;address&gt; tag</address>
+    <pre>
+        &lt;address>This is &lt;address&gt; tag&lt;/address>
+    </pre>
 
     <hr>
 
+    <h2>&lt;pre> tag</h2>
     <pre>This is &lt;pre&gt; tag</pre>
-
+    <pre>
+        &lt;pre>This is &lt;pre&gt; tag&lt;/pre>
+    </pre>
+    
     <hr>
 
+    <h2>&lt;a> tag</h2>
     <a href="https://www.naver.com">This is &lt;a&gt; tag that moves to naver </a>
     <br>
     <a href="https://www.naver.com" target="_blank">Used target attr, _blank.</a>
@@ -142,14 +271,38 @@
     <a href="https://www.naver.com" target="_parent">Used target attr, _parent</a>
     <br>
     <a href="https://www.naver.com" target="_top">Used target attr, _top</a>
+    
+    <br>
+    
+    <pre>
+        &lt;a href="https://www.naver.com">This is &lt;a&gt; tag that moves to naver &lt;/a>
+        &lt;br>
+        &lt;a href="https://www.naver.com" target="_blank">Used target attr, _blank.&lt;/a>
+        &lt;br>
+        &lt;a href="https://www.naver.com" target="_self">Used target attr, _self.&lt;/a>
+        &lt;br>
+        &lt;a href="https://www.naver.com" target="_parent">Used target attr, _parent&lt;/a>
+        &lt;br>
+        &lt;a href="https://www.naver.com" target="_top">Used target attr, _top&lt;/a>
+    </pre>
 
-    <hr>
+    <br>
 
     <h2>Link to a Specific Section, <a href="https://lhealmel.github.io/For%20test/ex1 (4).html">see this file</a></h2>
+    <pre>
+        &lt;h2>Link to a Specific Section, &lt;a href="https://lhealmel.github.io/For%20test/ex1 (4).html">see this file&lt;/a>&lt;/h2>
+    </pre>
 
-    <hr>
+    <br>
 
     <p>Link to an E-mail Sender
         <a href="mailto:mtn2072@gachon.ac.kr">Send mail</a>
     </p>
+
+    <pre>
+        &lt;p>Link to an E-mail Sender
+            &lt;a href="mailto:mtn2072@gachon.ac.kr">Send mail&lt;/a>
+        &lt;/p>
+    </pre>
+
 </html>
